@@ -27,7 +27,7 @@ export const Layout = ({ children }: IProps) => {
                 {children}
             </main>
             <footer className={classes.footer}>
-                <p className="roboto-thin">copyright © Mikołaj Strusiński 2024</p>
+                <p className="roboto-thin">copyright © Mikołaj Strusiński {new Date().getFullYear()}</p>
             </footer>
         </>
     )
