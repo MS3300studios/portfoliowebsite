@@ -7,7 +7,6 @@ export const LandingPage = () => {
     const [scrollPos, setScrollPos] = useState(window.scrollY);
 
     const handleScroll = () => {
-        console.log("window.scrollY", window.scrollY)
         setScrollPos(window.scrollY)
         if(window.scrollY > 50) {
             setHasScrolledDown(true);
@@ -15,7 +14,6 @@ export const LandingPage = () => {
     };
 
     useEffect(() => {
-        console.log('initial scroll', window.scrollY)
         window.addEventListener('scroll', handleScroll);
         return () => {
           window.removeEventListener('scroll', handleScroll);
@@ -35,13 +33,9 @@ export const LandingPage = () => {
                     <img src={profilePicture} alt="Mikolaj Strusiński" />
                 </div>
                 <div className={hasScrolledDown ? classes.innerArticle : ""}>
-                    <h1>
-                        Mikołaj Strusiński
-                    </h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus repudiandae, accusantium vitae, quibusdam et unde eaque, inventore accusamus nisi quis vel ab optio quisquam. Nobis quibusdam dolorum earum architecto aliquid voluptatem reiciendis magni repellat, numquam illum natus, quidem modi delectus cupiditate veniam ex repellendus ut voluptates similique nihil. Incidunt, voluptas.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolores reiciendis unde accusantium ipsum consectetur possimus qui. Aliquam corporis accusamus asperiores quam veritatis earum fugiat. Accusantium quam vitae sequi vero?
-                    </p>
+                    <h1>Mikołaj Strusiński</h1>
+                    <p>Welcome to my web page! This is my own sliver of the internet where I present different ideas, and my professional portfolio and experience!</p>
+                    <p>This page is currently under development, more content coming soon!</p>
                 </div>
             </article>
         </div>

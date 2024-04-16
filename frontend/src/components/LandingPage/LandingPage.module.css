@@ -9,7 +9,7 @@
 }
 
 .keyWords{
-    font-size: 75px;
+    font-size: 4vw;
     opacity: 0;
     animation: fadeIn 1s forwards;
     animation-delay: 0s;
@@ -35,11 +35,11 @@
 @keyframes slideInFromRight {
     from {
         opacity: 0;
-        transform: translateX(600px);
+        transform: translateX(30vw);
     }
     to {
         opacity: 100;
-        transform: translateX(-150px);
+        transform: translateX(-10vw);
     }
 }
 
@@ -51,12 +51,14 @@
 }
 
 .innerArticle > h1{
-    font-size: 150px;
+    font-size: 7vw;
+    margin: 10px;
     animation: slideInFromRight 0.75s ease-out forwards;
 }
 
 .innerArticle > p {
-    font-size: 40px;
+    font-size: 2vw;
+    margin: 1vw;
 }
 
 .profileWrapper{
@@ -64,6 +66,7 @@
 }
 
 .profileWrapper > img{
-    flex-shrink: 0;
     border-radius: 10px;
+    width: 45vw;
+    height: 45vw;
 }
