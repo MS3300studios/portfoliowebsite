@@ -1,72 +1,101 @@
-.headingWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    transition: all 0.7s ease-out;
+.welcomeBanner{
+    font-size: clamp(2em, 5vw, 5em);
 }
 
-.keyWords{
-    font-size: 4vw;
+.welcomeBanner > *{
+    margin-bottom: 4px;
+}
+
+.welcomeBanner > h1{
+    animation: fadeInSlideDown 1s ease-in-out;
+}
+
+.welcomeBanner > h3{
+    margin-top: 0px;
     opacity: 0;
-    animation: fadeIn 1s forwards;
-    animation-delay: 0s;
-}
-
-.keyWords:nth-child(2) {
+    animation: fadeInSlideDown 1s ease-in-out forwards;
     animation-delay: 1s;
 }
 
-.keyWords:nth-child(3) {
-    animation-delay: 2s;
+.welcomeBannerContainer{
+    display: flex;
+    justify-content: flex-start;
+    padding: 2em;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.iconsContainer{
+    margin-top: 20px;
+}
+
+.iconsContainer svg {
+    margin: 0px 0.2em;
+    height: 2em;
+    width: 2em;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInTranslate 0.6s ease-in forwards;
+}
+
+.iconsContainer svg:nth-child(1) {
+    animation-delay: 1.4s;
+}
+
+.iconsContainer svg:nth-child(2) {
+    animation-delay: 1.8s;
+}
+
+.iconsContainer svg:nth-child(3) {
+    animation-delay: 2.2s;
+}
+
+.iconsContainer svg:nth-child(4) {
+    animation-delay: 2.6s;
+}
+
+@keyframes fadeInTranslate {
     0% {
         opacity: 0;
+        transform: translateY(-10px);
     }
     100% {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@keyframes slideInFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(30vw);
-    }
-    to {
-        opacity: 100;
-        transform: translateX(-10vw);
-    }
-}
-
-.article{
-    transition: all 0.7s ease-out;
-    transition: opacity 0.2s ease-out;
+.scrollDownContainer{
+    width: 100%;
     display: flex;
-    padding: 0px 50px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s opacity linear;
 }
 
-.innerArticle > h1{
-    font-size: 7vw;
-    margin: 10px;
-    animation: slideInFromRight 0.75s ease-out forwards;
+.scrollDownContainer > svg{
+    width: 5em;
+    height: 5em;
+    animation: bounceDown 1.7s ease-out infinite;
 }
 
-.innerArticle > p {
-    font-size: 2vw;
-    margin: 1vw;
-}
-
-.profileWrapper{
-    margin-right: 20px;
-}
-
-.profileWrapper > img{
-    border-radius: 10px;
-    width: 45vw;
-    height: 45vw;
+@keyframes bounceDown {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(2em);
+    }
+    100% {
+        transform: translateY(0);
+    } 
 }
