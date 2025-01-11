@@ -4,6 +4,7 @@
 }
 
 body{
+    overflow: hidden;
     margin: 0px;
     height: 100vh;
     background-color: hsl(237, 40%, 5%);

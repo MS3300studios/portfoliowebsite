@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contentWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s linear, filter 0.2s linear;
+}
+
+.fadeOut{
+    opacity: 0;
+    filter: blur(7px);
+}
+
+.fadeIn{
+    opacity: 1;
+    filter: none;
+}
+
+/* .contentWrapperAnimated{
+    animation: blurAndFadeout 0.5s forwards;
+}
+
+@keyframes blurAndFadeout {
+    0%{
+        filter: blur(0px);
+        opacity: 1;
+    }
+    70%{
+        filter: blur(7px);
+    }
+    100%{
+        opacity: 0;
+    }
+} */

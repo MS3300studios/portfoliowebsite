@@ -1,0 +1,12 @@
+.card{
+    backdrop-filter: blur(20px) !important;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: 500;
+    border: 2px solid #fff;
+    width: 70%;
+    color: #fefefe;
+    max-height: 80%;
+    overflow-y: scroll;
+}

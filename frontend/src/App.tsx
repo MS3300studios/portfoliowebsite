@@ -1,7 +1,7 @@
 import './App.css'
-import { LandingPage } from './components/LandingPage/LandingPage'
 import faviconSvg from './assets/favicon.svg';
 import { useEffect } from 'react';
+import { Content } from './components/Content';
 
 function App() {
     useEffect(() => {
@@ -18,7 +18,7 @@ function App() {
 
     return (
         <>
-        <LandingPage />
+        <Content />
         <footer>
             <p className="roboto-thin">copyright © Mikołaj Strusiński {new Date().getFullYear()}</p>
         </footer>

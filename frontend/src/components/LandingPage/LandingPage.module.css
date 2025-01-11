@@ -1,5 +1,5 @@
 .welcomeBanner{
-    font-size: clamp(2em, 5vw, 5em);
+    font-size: clamp(1em, 5vw, 3em);
 }
 
 .welcomeBanner > *{
@@ -40,8 +40,8 @@
 
 .iconsContainer svg {
     margin: 0px 0.2em;
-    height: 2em;
-    width: 2em;
+    height: 1.5em;
+    width: 1.5em;
     opacity: 0;
     transform: translateY(-10px);
     animation: fadeInTranslate 0.6s ease-in forwards;
